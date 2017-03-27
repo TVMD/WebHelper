@@ -3,7 +3,7 @@
   "description": "nothing",
   "version": "2.0",
   "manifest_version": 2,
-  "permissions": ["storage", "tabs", "bookmarks", "declarativeWebRequest", "*://*/*"],
+  "permissions": ["storage", "tabs", "bookmarks", "declarativeWebRequest","management", "*://*/*"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -28,7 +28,7 @@
     },
     "pause_global": {
       "description": "pause",
-      "suggested_key": { "default": "Ctrl+Shift+2" },
+      "suggested_key": { "default": "Ctrl+Shift+9" },
       "global":true
     }
   }

@@ -7,7 +7,7 @@ $(function () {
         chrome.storage.sync.get('url', function (url) {
             var x = (url['url']);
             x = x.substring(0, x.indexOf("."));
-            if (x == tab.url.substring(0,tab.url.indexOf("."))) {
+            if (x == tab.url.substring(0, tab.url.indexOf("."))) {
                 chrome.storage.sync.set({ 'url': tab.url }, function () {
                     chrome.browserAction.setBadgeText({
                         text: "K"
@@ -36,4 +36,14 @@ $(function () {
                 });
             }
         });
+
+    $("#vpn").on("click", function () {
+        chrome.management.get("fdcgdnkidjaadafnichfpabhfomcebme", function (info) {
+            var x = !info.enabled;
+            chrome.management.setEnabled("fdcgdnkidjaadafnichfpabhfomcebme", x, function () {
+                console.log("ok");
+            });
+        });
+    });
+
 });
