@@ -3,11 +3,31 @@
   "description": "nothing",
   "version": "2.0",
   "manifest_version": 2,
-  "permissions": ["storage", "tabs", "bookmarks", "declarativeWebRequest","management", "*://*/*"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "declarativeWebRequest",
+    "management",
+    "*://*/*"
+  ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "removeadds.js",
+        "jquery3.0.js"
+      ]
+    }
+  ],
   "browser_action": {
     "default_title": "Music Youtube",
     "default_popup": "popup.html"
@@ -15,21 +35,29 @@
   "commands": {
     "next": {
       "description": "next",
-      "suggested_key": { "default": "Ctrl+Space" }
+      "suggested_key": {
+        "default": "Ctrl+Space"
+      }
     },
     "global_next2": {
       "description": "next",
-      "suggested_key": { "default": "Ctrl+Shift+0" },
-      "global":true
+      "suggested_key": {
+        "default": "Ctrl+Shift+0"
+      },
+      "global": true
     },
     "pause": {
       "description": "pause",
-      "suggested_key": { "default": "Ctrl+Shift+Space" }      
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space"
+      }
     },
     "pause_global": {
       "description": "pause",
-      "suggested_key": { "default": "Ctrl+Shift+9" },
-      "global":true
+      "suggested_key": {
+        "default": "Ctrl+Shift+9"
+      },
+      "global": true
     }
   }
 }
