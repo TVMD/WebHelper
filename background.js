@@ -56,12 +56,12 @@ chrome.commands.onCommand.addListener(function (command) {
                 || tabs[i].url.indexOf("deezer.com") > -1){
                 if (command == "next" || command == "global_next" || command == "global_next2") {
                     chrome.tabs.executeScript(tabs[i].id, {
-                        code: "document.querySelector('.ytp-next-button, .playControls__next, .icon-next').click();"
+                        code: "document.querySelector('.ytp-next-button, .playControls__next, .control-next').click();"
                     });
                 }
                 if (command == "pause" || command == "pause-global") {
                     chrome.tabs.executeScript(tabs[i].id, {
-                        code: "document.querySelector('.ytp-play-button, .playControls__play ').click(); $('.play-hover').first().click();"
+                        code: "document.querySelector('.ytp-play-button, .playControls__play , .control-play').click();"
                     });
                 }
             }
