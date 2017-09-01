@@ -20,12 +20,13 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*/*"
+        "https://daa.uit.edu.vn/sinhvien/dkshcd","<all_urls>"
       ],
       "js": [
         "removeadds.js",
         "jquery3.0.js"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ],
   "browser_action": {

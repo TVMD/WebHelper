@@ -38,9 +38,9 @@ $(function () {
         });
 
     $("#vpn").on("click", function () {
-        chrome.management.get("fdcgdnkidjaadafnichfpabhfomcebme", function (info) {
+        chrome.management.get("aapbdbdomjkkjkaonfhkkikfgjllcleb", function (info) {
             var x = !info.enabled;
-            chrome.management.setEnabled("fdcgdnkidjaadafnichfpabhfomcebme", x, function () {
+            chrome.management.setEnabled("aapbdbdomjkkjkaonfhkkikfgjllcleb", x, function () {
                 console.log("ok");
             });
         });
