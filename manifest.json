@@ -7,7 +7,7 @@
     "storage",
     "tabs",
     "bookmarks",
-    "declarativeWebRequest",
+    // "declarativeWebRequest",
     "management",
     "*://*/*"
   ],
